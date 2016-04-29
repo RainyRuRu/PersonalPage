@@ -16,13 +16,12 @@ function load() {
     var windowHeight = $(window).height();
     var windowWidth = $(window).width();
 
-    
-    if ((windowWidth < 950) || (windowWidth*1.3 < windowHeight)) {
+    if (windowWidth / 1.4 < windowHeight) {
         $("#homeBackground").css('background-position', 'center top');
-        $("#homeBackground").css('height', "100%");
+        $("#home").css('height', windowWidth/1.4+"px");
     } else {
         $("#homeBackground").css('background-position', 'center center');
-        $("#homeBackground").css('height', windowHeight+"px");
+        $("#home").css('height', windowHeight+"px");
     }
 
     console.log(windowHeight);

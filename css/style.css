@@ -1,5 +1,7 @@
 body{
     margin: 0 0;
+    //overflow: hidden;
+    background: url('../pic/test.jpg') repeat fixed;
 }
 
 
@@ -17,10 +19,10 @@ body{
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-filter: blur(4px); /* Chrome, Opera */
-    -moz-filter: blur(4px);
-    -ms-filter: blur(4px);    
-    filter: blur(4px);   
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);    
+    filter: blur(2px);   
     z-index: -1;
     position: absolute;
 }
@@ -28,11 +30,12 @@ body{
 #homeButton{
     background-color: rgba(0,0,0,0.6);
     float: right;
-    margin-top:20px;
-    margin-right:40px;
+    top:20px;
+    right:40px;
     width: 420px;
     height: 70px;
     z-index: 10;
+    position: fixed;
 }
 
 .iconField {
@@ -42,8 +45,9 @@ body{
     margin-left: 15px;
     margin-top: 2px;
     border-radius: 50px;
-    opacity: 0.6;
+    opacity: 0.5;
     float: left;
+    cursor: pointer;
 }
 
 .iconField:hover{
@@ -58,31 +62,133 @@ body{
 }
 
 
-#infotest {
-    width: 100%;
-    height: 680px;
-    background: url('../pic/2.jpg') -200px -314px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#haha {
-    width: 100%;
-    height: 680px;
-    background: url('../pic/3.jpg') -200px -314px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-
 #info {
     width: 100%;
     height: 420px;
-    background-color: lightgray;
+    margin: 100px 0px;
 }
+
+.personal {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url('../pic/me.jpg');
+    background-position: -90px -150px;
+    background-size: 160%;
+}
+
+.english {
+    font-family: 'Gochi Hand', cursive;
+}
+
+.english.name {  
+    font-size: 60px;
+}
+
+.english.address {
+    font-size: 40px;
+}
+
+#experience {
+    width: 100%;
+    height: 500px;
+    background-color: #FFF6CE;
+    
+}
+
+.blackboard {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-image: url('../pic/blackboard.png');
+}
+
+.textArea {
+    margin-top: 25%; 
+    margin-left: 10%;
+    position: absolute;
+    font-family: Microsoft JhengHei;
+    font-size: 30px;
+}
+
+
+.experienceButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    margin: 10px 10px;
+    float:left;
+    text-align:center;
+    line-height:100px;
+    font-family: Microsoft JhengHei;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.experienceBar {
+    height: 80%;
+    margin: 100px 0px;
+    cursor: pointer;
+}
+
+.experienceButton.b1 {
+    background-color: #FFA69E;
+}
+
+.experienceButton.b2 {
+    background-color: #3587A4;
+}
+
+.experienceButton.b3 {
+    background-color: #B5FFE9;
+}
+
+.experienceButton.b4 {
+    background-color: #F5FFC6;
+}
+
+.experienceButton.b5 {
+    background-color: #119DA4;
+}
+
+.experienceButton.b6 {
+    background-color: pink;
+}
+
+
+.experienceContainer{
+    width: 80%;
+    height: 80%;
+    margin: 50px auto;
+    padding: 10px 10px;
+    background-color: white;
+}
+
+.experienceBox {
+    background-clip: padding-box;
+    border-style: dashed;
+    border-width: 4px;
+    opacity: 0.8;
+    margin-left: 7px;
+
+}
+
+.experienceBox.b1 {
+    width: 20%;
+    height: 100%;
+    background-color: #FFA69E;
+    border-color:  #E06A5F;
+    float: left;
+}
+
+.experienceBox.b2 {
+    width: 40%;
+    height: 50%;
+    background-color: #3587A4;
+    border-color:  blue;
+    float: left;
+}
+
 
 #test {
     width: 100%;
@@ -90,17 +196,24 @@ body{
     background-color: skyblue;
 }
 
-
-.typing{
-    width:250px;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 3s steps(50, end) infinite;
-    animation: type 3s steps(50, end) infinite;
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
 }
-
-
-@-webkit-keyframes type{
-    from { width: 0;}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

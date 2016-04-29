@@ -1,10 +1,24 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Personal Page</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery.scrolling-parallax.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>  
+        <script src="js/typed.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <!-- google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
     </head>
     <body onload="load()">
 
@@ -12,13 +26,13 @@
             <div id="homeBackground">
             </div>
             <div id="homeButton">
-                <div class="iconField">
+                <div class="iconField" onclick="scrollToPage('#home')">
                     <img src="pic/icon/home.png" class="icon"/>
                 </div>
-                <div class="iconField">
+                <div class="iconField" onclick="scrollToPage('#info')">
                     <img src="pic/icon/graduate.png" class="icon"/>
                 </div>
-                <div class="iconField">
+                <div class="iconField" onclick="scrollToPage('#experience')">
                     <img src="pic/icon/violin.png" class="icon"/>
                 </div>
                 <div class="iconField">
@@ -29,12 +43,47 @@
                 </div>
             </div>
         </div>
+        
         <div id="info">
-            <img src="pic/girl1.png" class="blur" />
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-3 col-md-offset-2">
+                    <div class="personal"></div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="english name">Hi, I'm Rainy</div>
+                    <div class="english address">Chiayi, Taiwan</div>
+                  </div>
+                </div>
+            </div>
         </div>
 
-        <div id="haha">
-            <img src="pic/girl1.png" class="blur" />
+        <div id="experience">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="blackboard">
+                            <div class="textArea">
+                                <p id="experienceText" >click buttons</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="experienceBar">
+                            <div class="row">
+                                <div class="experienceButton b1" onclick="type('test');">實習</div>
+                                <div class="experienceButton b2" onclick="type('test2');">社團</div>
+                                <div class="experienceButton b3">服務學習</div>
+                            </div>
+                            <div class="row">
+                                <div class="experienceButton b4">論文</div>
+                                <div class="experienceButton b5">畢業專題</div>
+                                <div class="experienceButton b6">CPE</div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div style="height: 1000px">
